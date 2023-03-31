@@ -1,6 +1,4 @@
-<p class="text-gray-500 dark:text-gray-400"></p>
-<hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
-<p class="text-gray-500 dark:text-gray-400"></p>
+
 <div class="grid grid-rows-4 grid-flow-col gap-4">
     <div class="box-content max-w-xs shadow-md p-4 rounded-md bg-sky-50">
         <img class="p1 rounded-tr rounded-tl " src="<?php the_post_thumbnail_url(); ?>" />
