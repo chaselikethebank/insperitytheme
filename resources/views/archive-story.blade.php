@@ -1,31 +1,31 @@
 {{-- //story view --}}
 
 @extends('layouts.app')
-
 @section('content')
+    <div class="container m-auto">
+        @include('partials.page-header')
 
-  @include('partials.page-header')
-  @include('partials.subscribe')
-asdf
-  @if (! have_posts())
-    <x-alert type="warning">
-      {!! __('Sorry, no results were found.', 'sage') !!}
-    </x-alert>
+        <div class="flex ">
+            @include('partials.subscribe')
+        </div>
 
-    {!! get_search_form(false) !!}
-  @endif
+        @if (!have_posts())
+            <x-alert type="warning">
+                {!! __('Sorry, no results were found.', 'sage') !!}
+            </x-alert>
+            {!! get_search_form(false) !!}
+        @endif
 
-  <div class="flex">
-  @while(have_posts()) @php(the_post())
-  <div class="w-120 flex-2">
-    @includeFirst(['partials.content-story', 'partials.content'])
-  </div>
-  @endwhile
-  </div>
+        <div class="flex flex-wrap">
+        
+            @while (have_posts())
+                @php(the_post())
+                @includeFirst(['partials.content-story', 'partials.content'])
+            @endwhile
 
-  {!! get_the_posts_navigation() !!}
+            {!! get_the_posts_navigation() !!}
+           
+
+        </div>
+    </div>
 @endsection
-{{-- 
-@section('sidebar')
-  @include('sections.sidebar')
-@endsection --}}

@@ -1,5 +1,5 @@
 <form action="{{ url('/') }}" method="get">
-    <h2>Filter by Content Type</h2>
+    <h2>Filter Resources by</h2>
   
     <div class="mb-4">
       <label for="client-letters">
