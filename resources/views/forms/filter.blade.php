@@ -1,6 +1,6 @@
-<form action="{{ url('/') }}" method="get">
-    <h2>Filter Resources by</h2>
-  
+<form action="{{ url('/') }}" method="get" class="m-5">
+    <h2 class="m-3 text-blue-900 text-lg font-bold">Content Type</h2>
+  <div class="text-blue-600 font-semibold">
     <div class="mb-4">
       <label for="client-letters">
         <input type="checkbox" id="client-letters" name="content_type[]" value="client-letters"
@@ -24,6 +24,7 @@
         Client Stories
       </label>
     </div>
-  
-    <button type="submit" class="btn btn-primary">Filter</button>
+  </div>
+
+    {{-- <button type="submit" class="btn btn-primary">Filter</button> --}}
   </form>
